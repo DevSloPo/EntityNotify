@@ -173,16 +173,16 @@ local function showNotification(content, iconId, duration)
     })
     gradient.Rotation = 90
     gradient.Parent = notificationFrame
-    
+       
     pcall(function()
         local sound = Instance.new("Sound")
-        sound.SoundId = "rbxassetid://10363280111"
-        sound.Volume = 0.8
-        sound.Parent = mainContainer
-        sound:Play()
+        sound.SoundId = "rbxassetid://99469140131424"
+        sound.Volume = 10
+        sound.Parent = workspace
         sound.Ended:Connect(function()
             sound:Destroy()
         end)
+        sound:Play()
     end)
     
     table.insert(activeNotifications, 1, mainContainer)
