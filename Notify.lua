@@ -122,7 +122,7 @@ local function showNotification(content, iconId, duration)
     
     local iconImage = Instance.new("ImageLabel")
     iconImage.Name = "Icon"
-    iconImage.Size = UDim2.new(0.7, 0, 0.7, 0)
+    iconImage.Size = UDim2.new(1, 0, 1, 0)
     iconImage.Position = UDim2.new(0.5, 0, 0.5, 0)
     iconImage.AnchorPoint = Vector2.new(0.5, 0.5)
     iconImage.BackgroundTransparency = 1
@@ -153,12 +153,7 @@ local function showNotification(content, iconId, duration)
     messageLabel.TextColor3 = textColor
     messageLabel.TextSize = 18
     messageLabel.TextWrapped = true
-    messageLabel.Font = Enum.Font.Oswald
-    messageLabel.FontFace = Font.new(
-        "rbxasset://fonts/families/Oswald.json",
-        Enum.FontWeight.Bold,
-        Enum.FontStyle.Normal
-    )
+    messageLabel.Font = Enum.Font.RobotoCondensed
     messageLabel.TextXAlignment = Enum.TextXAlignment.Left
     messageLabel.TextYAlignment = Enum.TextYAlignment.Center
     messageLabel.ZIndex = 1001
@@ -181,7 +176,7 @@ local function showNotification(content, iconId, duration)
     
     pcall(function()
         local sound = Instance.new("Sound")
-        sound.SoundId = "rbxassetid://4590662766"
+        sound.SoundId = "rbxassetid://10363280111"
         sound.Volume = 0.8
         sound.Parent = mainContainer
         sound:Play()
